@@ -8,6 +8,7 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import Head from 'next/head'
 
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -35,14 +36,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-
-
-
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn("bg-background  h-full flex  flex-wrap justify-center font-sans leading-relaxed antialiased", fontSans.variable)}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="max-w-screen-xl flex flex-wrap">
+      <body className={cn("bg-background flex h-full min-w-[360px] max-w-screen-xl flex-wrap justify-center font-sans leading-relaxed antialiased", fontSans.variable)}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <div className="flex flex-wrap">
             {children}
           </div>
           <TailwindIndicator />

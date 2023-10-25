@@ -5,14 +5,18 @@ module.exports = {
   darkMode: ["class"],
   content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
   theme: {
+  
     container: {
       center: true,
       padding: "2rem",
-      screens: {
+      screens: {        
         "2xl": "1400px",
       },
     },
     extend: {
+      screens: {
+        "md": "830px"
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
