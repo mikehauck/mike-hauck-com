@@ -60,37 +60,44 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
+  a {
+      color: hsl(var(--stone-200));
+  }
+
+  a:hover {
+    color: hsl(var(--amber-300));
+  }
+
   nav li {
     border-left: 10px solid rgba(0,0,0,0);
     cursor: pointer;
-    color: hsl(var(--slate-400));
+    color: hsl(var(--slate-600));
     width: 100%;
   }
 
   nav li a {
-    display: block;
-    text-decoration: none;
+    display: block;    
     padding-left: 10px;
     width: 100%;
     height: 100%;
   }
 
-  nav .in-view li::after {
+  #nav-on-page nav li::after {
     content: '';
     display: block;
     width: 0;
     height: 2px;
-    background: hsl(var(--emerald-800));
+    background: hsl(var(--amber-500));
     transition: width .5s;
   }
 
-  nav in-view li.active, nav li:hover {
-    border-left: 10px solid hsl(var(--emerald-800));
+  #nav-on-page nav li.active, #nav-on-page nav li:hover {
+    border-left: 10px solid hsl(var(--amber-500));
     color: hsl(var(--slate-200));
     transition: border .5s;
   }
 
-  nav li.active:after, nav li:hover::after {
+  #nav-on-page nav li.active:after, #nav-on-page nav li:hover::after {
     width: 100%;
   }
 

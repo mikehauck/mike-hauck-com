@@ -26,7 +26,7 @@ export function ThemeToggle(props: any) {
         <DropdownMenuTrigger asChild>
           <Button variant="outline" className="px-2">
             <Sun className="h-5 w-5" />
-            <span className="mx-1">|</span>
+            <span className="mx-1.5">|</span>
             <Moon className="h-5 w-5" />
             <span className="sr-only">Select theme</span>
           </Button>
